@@ -24,8 +24,8 @@ const dataTyped = mergeSnippets(data, formatData(completeList, true));
 
 const projectRoot = __dirname.split("/").slice(0, -1).join("/");
 const outDir = path.join(projectRoot, "snippets");
-const outFile = path.join(outDir, "solidjs.code-snippets");
-const outFileTyped = path.join(outDir, "solidjs-typed.code-snippets");
+const outFile = path.join(outDir, "solid.code-snippets");
+const outFileTyped = path.join(outDir, "solid-typed.code-snippets");
 const vsCodeDir = path.join(projectRoot, ".vscode");
 const vsCodeTestFile = path.join(vsCodeDir, "test.code-snippets");
 
@@ -46,5 +46,3 @@ main();
 //   data: prettyJSON(data),
 //   dataTyped: prettyJSON(dataTyped),
 // });
-
-
