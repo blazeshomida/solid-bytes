@@ -61,7 +61,7 @@ const [state, setState] = createSignal(initialValue);
 
 ## Contributing
 
-Contributions are welcome! If you have ideas for new snippets, improvements, or find any issues, please open an issue or submit a pull request on our [GitHub repository](#).
+Contributions are welcome! If you have ideas for new snippets, improvements, or find any issues, please open an issue or submit a pull request on our [GitHub repository](https://github.com/blazeshomida/solidjs-snippets).
 
 ## License
 

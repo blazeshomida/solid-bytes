@@ -1,7 +1,9 @@
+.git
 .vscode/**
 .vscode-test/**
 .gitignore
-vsc-extension-quickstart.md
-src/**
-scripts/**
+.gitattributes
+**/*.ts
+**/tsconfig.json
 node_modules
+
