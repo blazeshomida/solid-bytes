@@ -1,0 +1,40 @@
+{
+  "name": "solidjs-snippets",
+  "displayName": "solidjs-snippets",
+  "description": "",
+  "version": "0.0.0",
+  "scripts": {
+    "generate": "ts-node scripts/generate.ts"
+  },
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/solidjs.code-snippets"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/solidjs.code-snippets"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/solidjs-typed.code-snippets"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/solidjs-typed.code-snippets"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.19",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
