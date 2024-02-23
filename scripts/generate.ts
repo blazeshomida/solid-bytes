@@ -6,6 +6,7 @@ import { Snippet } from "../src/types";
 import { mergeSnippets } from "../src/helpers/mergeSnippets";
 import { generateTable } from "../src/helpers/generateTable";
 import { outDir, outFile, outFileTyped, vsCodeTestFile } from "../src/constants";
+import { prettyJSON } from "../src/helpers/prettyJSON";
 
 function formatData(
   data: Record<string, Snippet | Partial<Snippet>>,
@@ -20,7 +21,7 @@ function formatData(
   }, {});
 }
 
-const prettyJSON = (value: any) => JSON.stringify(value, null, 2);
+
 const data = formatData(completeList);
 const dataTyped = mergeSnippets(data, formatData(completeList, true));
 
