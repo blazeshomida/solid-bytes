@@ -3,6 +3,7 @@ import { completeList } from "..";
 import { parseBody } from "./parseSnippet";
 import fs from "fs";
 import { readMeFile } from "../constants";
+import { prettyJSON } from "./prettyJSON";
 
 // GENERATE SNIPPETS TABLE
 export function generateTable() {
@@ -10,43 +11,51 @@ export function generateTable() {
   <table>
     <thead>
       <tr>
-        <th>Trigger</th>
+        <th>Name</th>
         <th>Content</th>
-        <th>Languages</th>
+        <th>Prefix</th>
       </tr>
     </thead>
     <tbody>`;
   Object.entries(completeList).forEach(([name, snippet]) => {
-    const { prefix, description, body, tsBody, key } = snippet;
-    table += `<tr><td colspan="3"><h3>${prefix}</h3></td></tr>`;
+    const {
+      prefix,
+      description,
+      body: rawBody,
+      tsBody: rawTsBody,
+      key,
+    } = snippet;
+    const body = parseBody(rawBody);
+
     table += `
   <tr>
-    <td><code>${name}→</code></td>
+    <td>${name}</td>
     <td>${description}</td>
-    <td>${key || prefix}</td>
+    <td><code>${prettyJSON(prefix)}→</code></td>
   </tr>
   <tr><td colspan="3"><details>
   <summary><sup>Toggle Code Snippet</sup></summary>
 
-  \`\`\`tsx
-  ${parseBody(body)}
-  \`\`\`
+\`\`\`tsx
+${Array.isArray(body) ? body.join("\n") : body}
+\`\`\`
 
   </details></td></tr>`;
 
-    if (tsBody) {
+    if (rawTsBody) {
+      const tsBody = parseBody(rawTsBody);
       table += `
   <tr>
-    <td><code>${name}→</code></td>
+    <td>${name}</td>  
     <td>${description}</td>
-    <td>${key || prefix}</td>
+    <td><code>${prettyJSON(prefix)}→</code></td>
   </tr>
   <tr><td colspan="3"><details>
   <summary><sup>Toggle Code Snippet</sup></summary>
 
-  \`\`\`tsx
-  ${tsBody}
-  \`\`\`
+\`\`\`tsx
+${Array.isArray(tsBody) ? tsBody.join("\n") : tsBody}
+\`\`\`
 
   </details></td></tr>`;
     }
