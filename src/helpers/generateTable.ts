@@ -4,16 +4,17 @@ import { parseBody } from "./parseSnippet";
 import fs from "fs";
 import { readMeFile } from "../constants";
 import { prettyJSON } from "./prettyJSON";
+import { slugify } from "./slugify";
 
 // GENERATE SNIPPETS TABLE
 export function generateTable() {
+  let list = ``;
   let table = `
   <table>
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Content</th>
         <th>Prefix</th>
+        <th>Language</th>
       </tr>
     </thead>
     <tbody>`;
@@ -27,37 +28,47 @@ export function generateTable() {
     } = snippet;
     const body = parseBody(rawBody);
 
+    list += `<code>${name}</code> • `;
     table += `
+  <tr><td colspan="2">
+    <details>
+      <summary><b>${name}</b></summary>
+      <p>${description}</p>
+    </details>
+  </td></tr>
   <tr>
-    <td>${name}</td>
-    <td>${description}</td>
-    <td><code>${prettyJSON(prefix)}→</code></td>
+    <td><code>${prettyJSON(prefix)}</code></td>
+    <td><code>js,jsx</code></td>  
   </tr>
-  <tr><td colspan="3"><details>
-  <summary><sup>Toggle Code Snippet</sup></summary>
+  <tr><td colspan="2">
 
 \`\`\`tsx
 ${Array.isArray(body) ? body.join("\n") : body}
 \`\`\`
 
-  </details></td></tr>`;
+ </td></tr>`;
 
     if (rawTsBody) {
       const tsBody = parseBody(rawTsBody);
+      list += `<code>${name}</code> • `;
       table += `
+  <tr><td colspan="2">
+    <details>
+      <summary><b>${name}</b></summary>
+      <p>${description}</p>
+    </details>
+  </td></tr>
   <tr>
-    <td>${name}</td>  
-    <td>${description}</td>
-    <td><code>${prettyJSON(prefix)}→</code></td>
+    <td><code>${prettyJSON(prefix)}</code></td>
+    <td><code>ts,tsx</code></td> 
   </tr>
-  <tr><td colspan="3"><details>
-  <summary><sup>Toggle Code Snippet</sup></summary>
+  <tr><td colspan="2">
 
 \`\`\`tsx
 ${Array.isArray(tsBody) ? tsBody.join("\n") : tsBody}
 \`\`\`
 
-  </details></td></tr>`;
+ </td></tr>`;
     }
   });
   table += `</tbody></table>`;
@@ -80,7 +91,7 @@ ${Array.isArray(tsBody) ? tsBody.join("\n") : tsBody}
     );
 
   let newReadme = readme.substring(0, start);
-  newReadme += `\n${table}\n\n`;
+  newReadme += `\n${list}\n\n${table}\n\n`;
   newReadme += readme.substring(end);
 
   fs.writeFileSync(readMeFile, newReadme);
