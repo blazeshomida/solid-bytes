@@ -4,6 +4,8 @@ import path from "path";
 import fs from "fs";
 import { Snippet } from "../src/types";
 import { mergeSnippets } from "../src/helpers/mergeSnippets";
+import { generateTable } from "../src/helpers/generateTable";
+import { outDir, outFile, outFileTyped, vsCodeTestFile } from "../src/constants";
 
 function formatData(
   data: Record<string, Snippet | Partial<Snippet>>,
@@ -22,12 +24,7 @@ const prettyJSON = (value: any) => JSON.stringify(value, null, 2);
 const data = formatData(completeList);
 const dataTyped = mergeSnippets(data, formatData(completeList, true));
 
-const projectRoot = __dirname.split("/").slice(0, -1).join("/");
-const outDir = path.join(projectRoot, "snippets");
-const outFile = path.join(outDir, "solid.code-snippets");
-const outFileTyped = path.join(outDir, "solid-typed.code-snippets");
-const vsCodeDir = path.join(projectRoot, ".vscode");
-const vsCodeTestFile = path.join(vsCodeDir, "test.code-snippets");
+
 
 function main() {
   if (outDir) {
@@ -41,6 +38,7 @@ function main() {
   fs.writeFileSync(vsCodeTestFile, prettyJSON(dataTyped));
 }
 main();
+generateTable();
 
 // console.log({
 //   data: prettyJSON(data),

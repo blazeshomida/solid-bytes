@@ -1,3 +1,5 @@
+import path from "path";
+
 // Textmate Variables
 export const TM = {
   selected: "${TM_SELECTED_TEXT}",
@@ -36,3 +38,10 @@ export const TM = {
   lineComment: "${LINE_COMMENT}",
 };
 
+
+export const projectRoot = __dirname.split("/").slice(0, -1).join("/");
+export const outDir = path.join(projectRoot, "snippets");
+export const outFile = path.join(outDir, "solid.code-snippets");
+export const outFileTyped = path.join(outDir, "solid-typed.code-snippets");
+export const vsCodeDir = path.join(projectRoot, ".vscode");
+export const vsCodeTestFile = path.join(vsCodeDir, "test.code-snippets");
