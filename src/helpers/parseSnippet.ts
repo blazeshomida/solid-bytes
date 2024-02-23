@@ -4,7 +4,7 @@ function invalidLine(line: string) {
   return !line.trim().length;
 }
 
-function parseBody(rawBody: Snippet["body"]) {
+export function parseBody(rawBody: Snippet["body"]) {
   if (!/\n/.test(rawBody)) return rawBody.trim();
   const lines = rawBody.split("\n").filter((line) => !invalidLine(line));
 
