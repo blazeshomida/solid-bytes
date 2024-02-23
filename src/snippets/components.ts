@@ -95,7 +95,7 @@ export const components: Record<string, Snippet> = {
   "Switch / Match": {
     prefix: "SSwitch",
     description:
-      "Switches between content based on mutually exclusive conditions. Selects a content based on condition when inside a `<Switch>` control flow",
+      "Switches between content based on mutually exclusive conditions. Selects a content based on condition when inside a `Switch` control flow",
     body: `
     <Switch\${1} fallback={<div>Not Found</div>}>
       <Match\${2} when={\${3:state.route === "home"}}>
