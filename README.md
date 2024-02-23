@@ -22,8 +22,6 @@ Alternatively, search for "Solid Bytes" in the Extensions view (`Ctrl+Shift+X` o
 
 ## Usage
 
-## Usage
-
 To efficiently use a snippet within your Solid projects, simply start typing its prefix in your project files. The extension will display a list of snippets that match the typed prefix. When you select a snippet, it inserts the code into your file, positioning the cursor right at the end of the function or component name.
 
 This cursor placement is specifically designed to streamline the importing process, allowing you to quickly import the necessary functions or components using `cmd + .` without having to do it manually.
@@ -49,10 +47,11 @@ Stay tuned for updates as we continue to expand the snippet collection and impro
 ## Full List
 
 <!-- ⛔️ GENERATE-SNIPPETS-TABLE:START — Do not remove or modify this section. -->
-<code>[createSignal](#createsignal)</code> • <code>[createSignal.ts](#createsignalts)</code> • <code>[createEffect](#createeffect)</code> • <code>[createEffect.ts](#createeffectts)</code> • <code>[createMemo](#creatememo)</code> • <code>[createMemo.ts](#creatememots)</code> • <code>[createResource](#createresource)</code> • <code>[Solid Component](#solid-component)</code> • <code>[Solid Component.ts](#solid-componentts)</code> • <code>[Solid Component Export](#solid-component-export)</code> • <code>[Solid Component Export.ts](#solid-component-exportts)</code> • <code>[Dynamic](#dynamic)</code> • <code>[ErrorBoundary](#errorboundary)</code> • <code>[For](#for)</code> • <code>[Index](#index)</code> • <code>[Portal](#portal)</code> • <code>[Show](#show)</code> • <code>[Switch / Match](#switch-match)</code> • <code>[Suspense](#suspense)</code> • <code>[SuspenseList](#suspenselist)</code> • <code>[children](#children)</code> • <code>[context](#context)</code> • <code>[createUniqueId](#createuniqueid)</code> • <code>[lazy](#lazy)</code> • <code>[createStore](#createstore)</code> • <code>[createStore.ts](#createstorets)</code> • <code>[batch](#batch)</code> • <code>[catchError](#catcherror)</code> • 
 
+<code>[createSignal](#createsignal)</code> • <code>[createSignal.ts](#createsignalts)</code> • <code>[createEffect](#createeffect)</code> • <code>[createEffect.ts](#createeffectts)</code> • <code>[createMemo](#creatememo)</code> • <code>[createMemo.ts](#creatememots)</code> • <code>[createResource](#createresource)</code> • <code>[Solid Component](#solid-component)</code> • <code>[Solid Component.ts](#solid-componentts)</code> • <code>[Solid Component Export](#solid-component-export)</code> • <code>[Solid Component Export.ts](#solid-component-exportts)</code> • <code>[Dynamic](#dynamic)</code> • <code>[ErrorBoundary](#errorboundary)</code> • <code>[For](#for)</code> • <code>[Index](#index)</code> • <code>[Portal](#portal)</code> • <code>[Show](#show)</code> • <code>[Switch / Match](#switch-match)</code> • <code>[Suspense](#suspense)</code> • <code>[SuspenseList](#suspenselist)</code> • <code>[children](#children)</code> • <code>[context](#context)</code> • <code>[createUniqueId](#createuniqueid)</code> • <code>[lazy](#lazy)</code> • <code>[createStore](#createstore)</code> • <code>[createStore.ts](#createstorets)</code> • <code>[batch](#batch)</code> • <code>[catchError](#catcherror)</code> •
 
 ### createSignal
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Creates a simple reactive state with a getter and setter</p>
@@ -69,6 +68,7 @@ const [${2:state}, set${2/(.*)/${1:/capitalize}/}] = createSignal${1}(${3})
 <sub>[Back to top](#full-list)</sub>
 
 ### createSignal.ts
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Creates a simple reactive state with a getter and setter</p>
@@ -85,6 +85,7 @@ const [${3:state}, set${3/(.*)/${1:/capitalize}/}] = createSignal${1}<${2}>(${4:
 <sub>[Back to top](#full-list)</sub>
 
 ### createEffect
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Creates a reactive computation that runs after the render phase</p>
@@ -101,6 +102,7 @@ createEffect${1}(() => { ${2} })
 <sub>[Back to top](#full-list)</sub>
 
 ### createEffect.ts
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Creates a reactive computation that runs after the render phase</p>
@@ -117,6 +119,7 @@ createEffect${1}<${2}>(() => { ${3} })
 <sub>[Back to top](#full-list)</sub>
 
 ### createMemo
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Creates a readonly derived reactive memoized signal</p>
@@ -133,6 +136,7 @@ const ${2:value} = createMemo${1}(() => ${3})
 <sub>[Back to top](#full-list)</sub>
 
 ### createMemo.ts
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Creates a readonly derived reactive memoized signal</p>
@@ -149,6 +153,7 @@ const ${3:value} = createMemo${1}<${2}>(() => {$4})
 <sub>[Back to top](#full-list)</sub>
 
 ### createResource
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Creates a resource that wraps a repeated promise in a reactive pattern</p>
@@ -165,6 +170,7 @@ const [${2:data}, { mutate, refetch }] = createResource${1}(${3})
 <sub>[Back to top](#full-list)</sub>
 
 ### Solid Component
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Solid Component</p>
@@ -183,6 +189,7 @@ const ${1:${TM_FILENAME_BASE}} = () => {
 <sub>[Back to top](#full-list)</sub>
 
 ### Solid Component.ts
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Solid Component</p>
@@ -202,6 +209,7 @@ const ${1:${TM_FILENAME_BASE}}: Component<${1:${TM_FILENAME_BASE}}Props> = (prop
 <sub>[Back to top](#full-list)</sub>
 
 ### Solid Component Export
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Solid Component Export</p>
@@ -220,6 +228,7 @@ export const ${1:${TM_FILENAME_BASE}} = () => {
 <sub>[Back to top](#full-list)</sub>
 
 ### Solid Component Export.ts
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Solid Component Export</p>
@@ -239,6 +248,7 @@ export const ${1:${TM_FILENAME_BASE}}: Component<${1:${TM_FILENAME_BASE}}Props> 
 <sub>[Back to top](#full-list)</sub>
 
 ### Dynamic
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Renders an arbitrary custom or native component and passes the other props</p>
@@ -255,6 +265,7 @@ export const ${1:${TM_FILENAME_BASE}}: Component<${1:${TM_FILENAME_BASE}}Props> 
 <sub>[Back to top](#full-list)</sub>
 
 ### ErrorBoundary
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Catches uncaught errors inside components and renders a fallback content. Errors thrown from the fallback can be caught by a parent ErrorBoundary</p>
@@ -273,6 +284,7 @@ export const ${1:${TM_FILENAME_BASE}}: Component<${1:${TM_FILENAME_BASE}}Props> 
 <sub>[Back to top](#full-list)</sub>
 
 ### For
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Creates a list of elements from a list. It receives a map function as its child that receives a list element and an accessor with the index and returns a JSX-Element; if the list is empty, an optional fallback is returned</p>
@@ -293,6 +305,7 @@ export const ${1:${TM_FILENAME_BASE}}: Component<${1:${TM_FILENAME_BASE}}Props> 
 <sub>[Back to top](#full-list)</sub>
 
 ### Index
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Non-keyed iteration over a list creating elements from its items. To be used if you have a list with fixed indices, but changing values. If you have a list with changing indices, better use `<For>`</p>
@@ -313,6 +326,7 @@ export const ${1:${TM_FILENAME_BASE}}: Component<${1:${TM_FILENAME_BASE}}Props> 
 <sub>[Back to top](#full-list)</sub>
 
 ### Portal
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Useful for inserting modals and tooltips outside of an cropping layout. If no mount point is given, the portal is inserted in document.body; it is wrapped in a `<div>` unless the target is document.head or `isSVG` is true. setting `useShadow` to true places the element in a shadow root to isolate styles</p>
@@ -331,6 +345,7 @@ export const ${1:${TM_FILENAME_BASE}}: Component<${1:${TM_FILENAME_BASE}}Props> 
 <sub>[Back to top](#full-list)</sub>
 
 ### Show
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Conditionally render its children or an optional fallback componentConditionally render its children or an optional fallback componentConditionally render its children or an optional fallback component</p>
@@ -349,6 +364,7 @@ export const ${1:${TM_FILENAME_BASE}}: Component<${1:${TM_FILENAME_BASE}}Props> 
 <sub>[Back to top](#full-list)</sub>
 
 ### Switch / Match
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Switches between content based on mutually exclusive conditions. Selects a content based on condition when inside a `Switch` control flow</p>
@@ -372,6 +388,7 @@ export const ${1:${TM_FILENAME_BASE}}: Component<${1:${TM_FILENAME_BASE}}Props> 
 <sub>[Back to top](#full-list)</sub>
 
 ### Suspense
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Tracks all resources inside a component and renders a fallback until they are all resolved</p>
@@ -390,6 +407,7 @@ export const ${1:${TM_FILENAME_BASE}}: Component<${1:${TM_FILENAME_BASE}}Props> 
 <sub>[Back to top](#full-list)</sub>
 
 ### SuspenseList
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>**[experimental]** Controls the order in which suspended content is rendered</p>
@@ -410,6 +428,7 @@ export const ${1:${TM_FILENAME_BASE}}: Component<${1:${TM_FILENAME_BASE}}Props> 
 <sub>[Back to top](#full-list)</sub>
 
 ### children
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Resolves child elements to help interact with children</p>
@@ -426,6 +445,7 @@ const ${2} = children${1}(() => ${3:props.children})
 <sub>[Back to top](#full-list)</sub>
 
 ### context
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Creates a Context to handle a state scoped for the children of a component. use a context to receive a scoped state from a parent's Context.Provider</p>
@@ -456,6 +476,7 @@ export function ${2:Counter}Provider() {
 <sub>[Back to top](#full-list)</sub>
 
 ### createUniqueId
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>A universal id generator that is stable across server/browser. Note: on the server this only works under hydratable components</p>
@@ -472,6 +493,7 @@ const ${2:id} = createUniqueId${1}()
 <sub>[Back to top](#full-list)</sub>
 
 ### lazy
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Used to lazy load components to allow for code splitting. Components are not loaded until rendered</p>
@@ -488,6 +510,7 @@ const ${2} = lazy${1}(() => import("${3}"))
 <sub>[Back to top](#full-list)</sub>
 
 ### createStore
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Creates a reactive store that can be read through a proxy object and written with a setter function</p>
@@ -504,6 +527,7 @@ const [${2:state}, set${2/(.*)/${1:/capitalize}/}] = createStore${1}(${3})
 <sub>[Back to top](#full-list)</sub>
 
 ### createStore.ts
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Creates a reactive store that can be read through a proxy object and written with a setter function</p>
@@ -520,6 +544,7 @@ const [${3:state}, set${3/(.*)/${1:/capitalize}/}] = createStore${1}<$2>(${4})
 <sub>[Back to top](#full-list)</sub>
 
 ### batch
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Execute a callback that will not side-effect until its top-most batch is completed</p>
@@ -536,6 +561,7 @@ batch${1}(() => { ${2:set${3:State}(${4})} });
 <sub>[Back to top](#full-list)</sub>
 
 ### catchError
+
 <details>
   <summary><sup>View Details</sup></summary>
   <p>Run an effect whenever an error is thrown within the context of the child scopes</p>
@@ -550,6 +576,5 @@ const ${4:result} = catchError${1}(${2:() => {${3}\}});
 ```
 
 <sub>[Back to top](#full-list)</sub>
-
 
 <!-- ⛔️ GENERATE-SNIPPETS-TABLE:END — Do not remove or modify this section. -->
