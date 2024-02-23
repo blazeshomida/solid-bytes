@@ -5,19 +5,44 @@ import fs from "fs";
 import { readMeFile } from "../constants";
 import { prettyJSON } from "./prettyJSON";
 import { slugify } from "./slugify";
+import { Snippet } from "../types";
+
+type TableRow = Omit<Snippet, "body" | "tsBody"> & {
+  name: string;
+  ts?: boolean;
+  body: string | string[];
+};
+
+function addListItem(name: string, ts: boolean = false) {
+  return `<code>[${ts ? name + ".ts" : name}](#${slugify(
+    ts ? name + ".ts" : name
+  )})</code> • `;
+}
+
+function addTableRow({ name, description, prefix, body, ts }: TableRow) {
+  return `
+### ${ts ? name + ".ts" : name}
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>${description}</p>
+</details>
+<div>
+  <span><code>${prettyJSON(prefix)}</code></span>
+  <span><code>${ts ? "ts,tsx" : "js,jsx"}</code></span>  
+</div>
+    
+\`\`\`tsx
+${Array.isArray(body) ? body.join("\n") : body}
+\`\`\`
+
+<sub>[Back to top](#full-list)</sub>
+`;
+}
 
 // GENERATE SNIPPETS TABLE
 export function generateTable() {
   let list = ``;
-  let table = `
-  <table>
-    <thead>
-      <tr>
-        <th>Prefix</th>
-        <th>Language</th>
-      </tr>
-    </thead>
-    <tbody>`;
+  let table = ``;
   Object.entries(completeList).forEach(([name, snippet]) => {
     const {
       prefix,
@@ -27,51 +52,21 @@ export function generateTable() {
       key,
     } = snippet;
     const body = parseBody(rawBody);
-
-    list += `<code>${name}</code> • `;
-    table += `
-  <tr><td colspan="2">
-    <details>
-      <summary><b>${name}</b></summary>
-      <p>${description}</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>${prettyJSON(prefix)}</code></td>
-    <td><code>js,jsx</code></td>  
-  </tr>
-  <tr><td colspan="2">
-
-\`\`\`tsx
-${Array.isArray(body) ? body.join("\n") : body}
-\`\`\`
-
- </td></tr>`;
+    list += addListItem(name);
+    table += addTableRow({ name, body, prefix, description });
 
     if (rawTsBody) {
       const tsBody = parseBody(rawTsBody);
-      list += `<code>${name}</code> • `;
-      table += `
-  <tr><td colspan="2">
-    <details>
-      <summary><b>${name}</b></summary>
-      <p>${description}</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>${prettyJSON(prefix)}</code></td>
-    <td><code>ts,tsx</code></td> 
-  </tr>
-  <tr><td colspan="2">
-
-\`\`\`tsx
-${Array.isArray(tsBody) ? tsBody.join("\n") : tsBody}
-\`\`\`
-
- </td></tr>`;
+      list += addListItem(name, true);
+      table += addTableRow({
+        name,
+        body: tsBody,
+        prefix,
+        description,
+        ts: true,
+      });
     }
   });
-  table += `</tbody></table>`;
 
   const readme = readFileSync(readMeFile).toString();
   let start = readme.indexOf(

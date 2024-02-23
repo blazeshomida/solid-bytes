@@ -80,167 +80,149 @@ Stay tuned for updates as we continue to expand the snippet collection and impro
 ## Full List
 
 <!-- ⛔️ GENERATE-SNIPPETS-TABLE:START — Do not remove or modify this section. -->
-<code>createSignal</code> • <code>createSignal</code> • <code>createEffect</code> • <code>createEffect</code> • <code>createMemo</code> • <code>createMemo</code> • <code>createResource</code> • <code>Solid Component</code> • <code>Solid Component</code> • <code>Solid Component Export</code> • <code>Solid Component Export</code> • <code>Dynamic</code> • <code>ErrorBoundary</code> • <code>For</code> • <code>Index</code> • <code>Portal</code> • <code>Show</code> • <code>Switch / Match</code> • <code>Suspense</code> • <code>SuspenseList</code> • <code>children</code> • <code>context</code> • <code>createUniqueId</code> • <code>lazy</code> • <code>createStore</code> • <code>createStore</code> • <code>batch</code> • <code>catchError</code> • 
+<code>[createSignal](#createsignal)</code> • <code>[createSignal.ts](#createsignalts)</code> • <code>[createEffect](#createeffect)</code> • <code>[createEffect.ts](#createeffectts)</code> • <code>[createMemo](#creatememo)</code> • <code>[createMemo.ts](#creatememots)</code> • <code>[createResource](#createresource)</code> • <code>[Solid Component](#solid-component)</code> • <code>[Solid Component.ts](#solid-componentts)</code> • <code>[Solid Component Export](#solid-component-export)</code> • <code>[Solid Component Export.ts](#solid-component-exportts)</code> • <code>[Dynamic](#dynamic)</code> • <code>[ErrorBoundary](#errorboundary)</code> • <code>[For](#for)</code> • <code>[Index](#index)</code> • <code>[Portal](#portal)</code> • <code>[Show](#show)</code> • <code>[Switch / Match](#switch-match)</code> • <code>[Suspense](#suspense)</code> • <code>[SuspenseList](#suspenselist)</code> • <code>[children](#children)</code> • <code>[context](#context)</code> • <code>[createUniqueId](#createuniqueid)</code> • <code>[lazy](#lazy)</code> • <code>[createStore](#createstore)</code> • <code>[createStore.ts](#createstorets)</code> • <code>[batch](#batch)</code> • <code>[catchError](#catcherror)</code> • 
 
 
-  <table>
-    <thead>
-      <tr>
-        <th>Prefix</th>
-        <th>Language</th>
-      </tr>
-    </thead>
-    <tbody>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>createSignal</b></summary>
-      <p>Creates a simple reactive state with a getter and setter</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SSignal"</code></td>
-    <td><code>js,jsx</code></td>  
-  </tr>
-  <tr><td colspan="2">
-
+### createSignal
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Creates a simple reactive state with a getter and setter</p>
+</details>
+<div>
+  <span><code>"SSignal"</code></span>
+  <span><code>js,jsx</code></span>  
+</div>
+    
 ```tsx
 const [${2:state}, set${2/(.*)/${1:/capitalize}/}] = createSignal${1}(${3})
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>createSignal</b></summary>
-      <p>Creates a simple reactive state with a getter and setter</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SSignal"</code></td>
-    <td><code>ts,tsx</code></td> 
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### createSignal.ts
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Creates a simple reactive state with a getter and setter</p>
+</details>
+<div>
+  <span><code>"SSignal"</code></span>
+  <span><code>ts,tsx</code></span>  
+</div>
+    
 ```tsx
 const [${3:state}, set${3/(.*)/${1:/capitalize}/}] = createSignal${1}<${2}>(${4:null})
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>createEffect</b></summary>
-      <p>Creates a reactive computation that runs after the render phase</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SEffect"</code></td>
-    <td><code>js,jsx</code></td>  
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### createEffect
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Creates a reactive computation that runs after the render phase</p>
+</details>
+<div>
+  <span><code>"SEffect"</code></span>
+  <span><code>js,jsx</code></span>  
+</div>
+    
 ```tsx
 createEffect${1}(() => { ${2} })
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>createEffect</b></summary>
-      <p>Creates a reactive computation that runs after the render phase</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SEffect"</code></td>
-    <td><code>ts,tsx</code></td> 
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### createEffect.ts
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Creates a reactive computation that runs after the render phase</p>
+</details>
+<div>
+  <span><code>"SEffect"</code></span>
+  <span><code>ts,tsx</code></span>  
+</div>
+    
 ```tsx
 createEffect${1}<${2}>(() => { ${3} })
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>createMemo</b></summary>
-      <p>Creates a readonly derived reactive memoized signal</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SMemo"</code></td>
-    <td><code>js,jsx</code></td>  
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### createMemo
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Creates a readonly derived reactive memoized signal</p>
+</details>
+<div>
+  <span><code>"SMemo"</code></span>
+  <span><code>js,jsx</code></span>  
+</div>
+    
 ```tsx
 const ${2:value} = createMemo${1}(() => ${3})
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>createMemo</b></summary>
-      <p>Creates a readonly derived reactive memoized signal</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SMemo"</code></td>
-    <td><code>ts,tsx</code></td> 
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### createMemo.ts
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Creates a readonly derived reactive memoized signal</p>
+</details>
+<div>
+  <span><code>"SMemo"</code></span>
+  <span><code>ts,tsx</code></span>  
+</div>
+    
 ```tsx
 const ${3:value} = createMemo${1}<${2}>(() => {$4})
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>createResource</b></summary>
-      <p>Creates a resource that wraps a repeated promise in a reactive pattern</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SResource"</code></td>
-    <td><code>js,jsx</code></td>  
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### createResource
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Creates a resource that wraps a repeated promise in a reactive pattern</p>
+</details>
+<div>
+  <span><code>"SResource"</code></span>
+  <span><code>js,jsx</code></span>  
+</div>
+    
 ```tsx
 const [${2:data}, { mutate, refetch }] = createResource${1}(${3})
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>Solid Component</b></summary>
-      <p>Solid Component</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SComponent"</code></td>
-    <td><code>js,jsx</code></td>  
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### Solid Component
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Solid Component</p>
+</details>
+<div>
+  <span><code>"SComponent"</code></span>
+  <span><code>js,jsx</code></span>  
+</div>
+    
 ```tsx
 const ${1:${TM_FILENAME_BASE}} = () => {
   return <div>${1:${TM_FILENAME_BASE}}</div>
 }
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>Solid Component</b></summary>
-      <p>Solid Component</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SComponent"</code></td>
-    <td><code>ts,tsx</code></td> 
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### Solid Component.ts
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Solid Component</p>
+</details>
+<div>
+  <span><code>"SComponent"</code></span>
+  <span><code>ts,tsx</code></span>  
+</div>
+    
 ```tsx
 type ${1:${TM_FILENAME_BASE}}Props = {}
 const ${1:${TM_FILENAME_BASE}}: Component<${1:${TM_FILENAME_BASE}}Props> = (props) => {
@@ -248,38 +230,36 @@ const ${1:${TM_FILENAME_BASE}}: Component<${1:${TM_FILENAME_BASE}}Props> = (prop
 }
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>Solid Component Export</b></summary>
-      <p>Solid Component Export</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SExportComponent"</code></td>
-    <td><code>js,jsx</code></td>  
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### Solid Component Export
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Solid Component Export</p>
+</details>
+<div>
+  <span><code>"SExportComponent"</code></span>
+  <span><code>js,jsx</code></span>  
+</div>
+    
 ```tsx
 export const ${1:${TM_FILENAME_BASE}} = () => {
   return <div>${1:${TM_FILENAME_BASE}}</div>
 }
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>Solid Component Export</b></summary>
-      <p>Solid Component Export</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SExportComponent"</code></td>
-    <td><code>ts,tsx</code></td> 
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### Solid Component Export.ts
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Solid Component Export</p>
+</details>
+<div>
+  <span><code>"SExportComponent"</code></span>
+  <span><code>ts,tsx</code></span>  
+</div>
+    
 ```tsx
 type ${1:${TM_FILENAME_BASE}}Props = {}
 export const ${1:${TM_FILENAME_BASE}}: Component<${1:${TM_FILENAME_BASE}}Props> = (props) => {
@@ -287,55 +267,52 @@ export const ${1:${TM_FILENAME_BASE}}: Component<${1:${TM_FILENAME_BASE}}Props> 
 }
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>Dynamic</b></summary>
-      <p>Renders an arbitrary custom or native component and passes the other props</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SDynamic"</code></td>
-    <td><code>js,jsx</code></td>  
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### Dynamic
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Renders an arbitrary custom or native component and passes the other props</p>
+</details>
+<div>
+  <span><code>"SDynamic"</code></span>
+  <span><code>js,jsx</code></span>  
+</div>
+    
 ```tsx
 <Dynamic${1} component={${2:<MyComponent />}} ${3} /
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>ErrorBoundary</b></summary>
-      <p>Catches uncaught errors inside components and renders a fallback content. Errors thrown from the fallback can be caught by a parent ErrorBoundary</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SErrorBoundary"</code></td>
-    <td><code>js,jsx</code></td>  
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### ErrorBoundary
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Catches uncaught errors inside components and renders a fallback content. Errors thrown from the fallback can be caught by a parent ErrorBoundary</p>
+</details>
+<div>
+  <span><code>"SErrorBoundary"</code></span>
+  <span><code>js,jsx</code></span>  
+</div>
+    
 ```tsx
 <ErrorBoundary${1} fallback={(error, reset) => <div onClick={reset}>Error: {error.toString()}</div>}>
   ${2:${TM_SELECTED_TEXT}}
 </ErrorBoundary>
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>For</b></summary>
-      <p>Creates a list of elements from a list. It receives a map function as its child that receives a list element and an accessor with the index and returns a JSX-Element; if the list is empty, an optional fallback is returned</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SFor"</code></td>
-    <td><code>js,jsx</code></td>  
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### For
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Creates a list of elements from a list. It receives a map function as its child that receives a list element and an accessor with the index and returns a JSX-Element; if the list is empty, an optional fallback is returned</p>
+</details>
+<div>
+  <span><code>"SFor"</code></span>
+  <span><code>js,jsx</code></span>  
+</div>
+    
 ```tsx
 <For${1} each={${2:list}()} fallback={<div>Loading...</div>}>
   {(${3:item}) => (
@@ -344,19 +321,18 @@ export const ${1:${TM_FILENAME_BASE}}: Component<${1:${TM_FILENAME_BASE}}Props> 
 </For>
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>Index</b></summary>
-      <p>Non-keyed iteration over a list creating elements from its items. To be used if you have a list with fixed indices, but changing values. If you have a list with changing indices, better use `<For>`</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SIndex"</code></td>
-    <td><code>js,jsx</code></td>  
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### Index
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Non-keyed iteration over a list creating elements from its items. To be used if you have a list with fixed indices, but changing values. If you have a list with changing indices, better use `<For>`</p>
+</details>
+<div>
+  <span><code>"SIndex"</code></span>
+  <span><code>js,jsx</code></span>  
+</div>
+    
 ```tsx
 <Index${1} each={${2:list}()} fallback={<div>Loading...</div>}>
   {(${3:item}) => (
@@ -365,57 +341,54 @@ export const ${1:${TM_FILENAME_BASE}}: Component<${1:${TM_FILENAME_BASE}}Props> 
 </Index>
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>Portal</b></summary>
-      <p>Useful for inserting modals and tooltips outside of an cropping layout. If no mount point is given, the portal is inserted in document.body; it is wrapped in a `<div>` unless the target is document.head or `isSVG` is true. setting `useShadow` to true places the element in a shadow root to isolate styles</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SPortal"</code></td>
-    <td><code>js,jsx</code></td>  
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### Portal
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Useful for inserting modals and tooltips outside of an cropping layout. If no mount point is given, the portal is inserted in document.body; it is wrapped in a `<div>` unless the target is document.head or `isSVG` is true. setting `useShadow` to true places the element in a shadow root to isolate styles</p>
+</details>
+<div>
+  <span><code>"SPortal"</code></span>
+  <span><code>js,jsx</code></span>  
+</div>
+    
 ```tsx
 <Portal${1} mount={document.getElementById("${2}")}>
   ${3:<div>${4:My Content}</div>}
 </Portal>
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>Show</b></summary>
-      <p>Conditionally render its children or an optional fallback componentConditionally render its children or an optional fallback componentConditionally render its children or an optional fallback component</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SShow"</code></td>
-    <td><code>js,jsx</code></td>  
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### Show
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Conditionally render its children or an optional fallback componentConditionally render its children or an optional fallback componentConditionally render its children or an optional fallback component</p>
+</details>
+<div>
+  <span><code>"SShow"</code></span>
+  <span><code>js,jsx</code></span>  
+</div>
+    
 ```tsx
 <Show${1} when=${2:state.count > 0} fallback={<div>Loading...</div>}>
   ${3:<div>$4:My Content}</div>}
 </Show>
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>Switch / Match</b></summary>
-      <p>Switches between content based on mutually exclusive conditions. Selects a content based on condition when inside a `Switch` control flow</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SSwitch"</code></td>
-    <td><code>js,jsx</code></td>  
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### Switch / Match
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Switches between content based on mutually exclusive conditions. Selects a content based on condition when inside a `Switch` control flow</p>
+</details>
+<div>
+  <span><code>"SSwitch"</code></span>
+  <span><code>js,jsx</code></span>  
+</div>
+    
 ```tsx
 <Switch${1} fallback={<div>Not Found</div>}>
   <Match${2} when={${3:state.route === "home"}}>
@@ -427,38 +400,36 @@ export const ${1:${TM_FILENAME_BASE}}: Component<${1:${TM_FILENAME_BASE}}Props> 
 </Switch>
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>Suspense</b></summary>
-      <p>Tracks all resources inside a component and renders a fallback until they are all resolved</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SSuspense"</code></td>
-    <td><code>js,jsx</code></td>  
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### Suspense
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Tracks all resources inside a component and renders a fallback until they are all resolved</p>
+</details>
+<div>
+  <span><code>"SSuspense"</code></span>
+  <span><code>js,jsx</code></span>  
+</div>
+    
 ```tsx
 <Suspense${1} fallback={<div>Loading...</div>}>
   ${2:${TM_SELECTED_TEXT}}
 </Suspense>
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>SuspenseList</b></summary>
-      <p>**[experimental]** Controls the order in which suspended content is rendered</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SSuspenseList"</code></td>
-    <td><code>js,jsx</code></td>  
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### SuspenseList
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>**[experimental]** Controls the order in which suspended content is rendered</p>
+</details>
+<div>
+  <span><code>"SSuspenseList"</code></span>
+  <span><code>js,jsx</code></span>  
+</div>
+    
 ```tsx
 <SuspenseList${1} revealOrder="${3|forwards,backwards,together|}" tail="${4|collapsed,hidden|}">
   <Suspense${2} fallback={<h2>Loading...</h2>}>
@@ -467,36 +438,34 @@ export const ${1:${TM_FILENAME_BASE}}: Component<${1:${TM_FILENAME_BASE}}Props> 
 </SuspenseList>
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>children</b></summary>
-      <p>Resolves child elements to help interact with children</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SChildren"</code></td>
-    <td><code>js,jsx</code></td>  
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### children
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Resolves child elements to help interact with children</p>
+</details>
+<div>
+  <span><code>"SChildren"</code></span>
+  <span><code>js,jsx</code></span>  
+</div>
+    
 ```tsx
 const ${2} = children${1}(() => ${3:props.children})
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>context</b></summary>
-      <p>Creates a Context to handle a state scoped for the children of a component. use a context to receive a scoped state from a parent's Context.Provider</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SContext"</code></td>
-    <td><code>js,jsx</code></td>  
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### context
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Creates a Context to handle a state scoped for the children of a component. use a context to receive a scoped state from a parent's Context.Provider</p>
+</details>
+<div>
+  <span><code>"SContext"</code></span>
+  <span><code>js,jsx</code></span>  
+</div>
+    
 ```tsx
 export const ${2}Context = createContext${1}(${3})
 export function use${2}Context() {
@@ -515,108 +484,103 @@ export function ${2:Counter}Provider() {
 }
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>createUniqueId</b></summary>
-      <p>A universal id generator that is stable across server/browser. Note: on the server this only works under hydratable components</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SUuid"</code></td>
-    <td><code>js,jsx</code></td>  
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### createUniqueId
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>A universal id generator that is stable across server/browser. Note: on the server this only works under hydratable components</p>
+</details>
+<div>
+  <span><code>"SUuid"</code></span>
+  <span><code>js,jsx</code></span>  
+</div>
+    
 ```tsx
 const ${2:id} = createUniqueId${1}()
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>lazy</b></summary>
-      <p>Used to lazy load components to allow for code splitting. Components are not loaded until rendered</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SLazy"</code></td>
-    <td><code>js,jsx</code></td>  
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### lazy
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Used to lazy load components to allow for code splitting. Components are not loaded until rendered</p>
+</details>
+<div>
+  <span><code>"SLazy"</code></span>
+  <span><code>js,jsx</code></span>  
+</div>
+    
 ```tsx
 const ${2} = lazy${1}(() => import("${3}"))
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>createStore</b></summary>
-      <p>Creates a reactive store that can be read through a proxy object and written with a setter function</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SStore"</code></td>
-    <td><code>js,jsx</code></td>  
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### createStore
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Creates a reactive store that can be read through a proxy object and written with a setter function</p>
+</details>
+<div>
+  <span><code>"SStore"</code></span>
+  <span><code>js,jsx</code></span>  
+</div>
+    
 ```tsx
 const [${2:state}, set${2/(.*)/${1:/capitalize}/}] = createStore${1}(${3})
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>createStore</b></summary>
-      <p>Creates a reactive store that can be read through a proxy object and written with a setter function</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SStore"</code></td>
-    <td><code>ts,tsx</code></td> 
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### createStore.ts
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Creates a reactive store that can be read through a proxy object and written with a setter function</p>
+</details>
+<div>
+  <span><code>"SStore"</code></span>
+  <span><code>ts,tsx</code></span>  
+</div>
+    
 ```tsx
 const [${3:state}, set${3/(.*)/${1:/capitalize}/}] = createStore${1}<$2>(${4})
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>batch</b></summary>
-      <p>Execute a callback that will not side-effect until its top-most batch is completed</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SBatch"</code></td>
-    <td><code>js,jsx</code></td>  
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### batch
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Execute a callback that will not side-effect until its top-most batch is completed</p>
+</details>
+<div>
+  <span><code>"SBatch"</code></span>
+  <span><code>js,jsx</code></span>  
+</div>
+    
 ```tsx
 batch${1}(() => { ${2:set${3:State}(${4})} });
 ```
 
- </td></tr>
-  <tr><td colspan="2">
-    <details>
-      <summary><b>catchError</b></summary>
-      <p>Run an effect whenever an error is thrown within the context of the child scopes</p>
-    </details>
-  </td></tr>
-  <tr>
-    <td><code>"SCatchError"</code></td>
-    <td><code>js,jsx</code></td>  
-  </tr>
-  <tr><td colspan="2">
+<sub>[Back to top](#full-list)</sub>
 
+### catchError
+<details>
+  <summary><sup>View Details</sup></summary>
+  <p>Run an effect whenever an error is thrown within the context of the child scopes</p>
+</details>
+<div>
+  <span><code>"SCatchError"</code></span>
+  <span><code>js,jsx</code></span>  
+</div>
+    
 ```tsx
 const ${4:result} = catchError${1}(${2:() => {${3}\}});
 ```
 
- </td></tr></tbody></table>
+<sub>[Back to top](#full-list)</sub>
+
 
 <!-- ⛔️ GENERATE-SNIPPETS-TABLE:END — Do not remove or modify this section. -->
