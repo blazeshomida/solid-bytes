@@ -15,49 +15,18 @@ This Visual Studio Code extension offers a comprehensive collection of Solid sni
 
 1. Open Visual Studio Code.
 2. Press `Ctrl+P` (Windows/Linux) or `Cmd+P` (macOS) to open the Quick Open dialog.
-3. Type `ext install solid-snippets`
+3. Type `ext install solid-bytes`
 4. Hit Enter to install the extension.
 
-Alternatively, search for "Solid Snippets" in the Extensions view (`Ctrl+Shift+X` or `Cmd+Shift+X`).
+Alternatively, search for "Solid Bytes" in the Extensions view (`Ctrl+Shift+X` or `Cmd+Shift+X`).
 
 ## Usage
 
-To use a snippet, start typing its prefix in your Solid project files. The extension will show a list of suggestions. Selecting a snippet will insert it into your file. Here are some examples:
+## Usage
 
-- `SComponent`: Scaffold a Solid component.
-- `SSignal`: Create a reactive state with a getter and setter.
-- `SErrorBoundary`: Implement an error boundary around a set of components.
+To efficiently use a snippet within your Solid projects, simply start typing its prefix in your project files. The extension will display a list of snippets that match the typed prefix. When you select a snippet, it inserts the code into your file, positioning the cursor right at the end of the function or component name.
 
-## Example Snippets
-
-### Solid Component
-
-```js
-// Prefix: SComponent
-const MyComponent = () => {
-  return <div>MyComponent</div>;
-};
-```
-
-### Create Signal
-
-```js
-// Prefix: SSignal
-const [state, setState] = createSignal(initialValue);
-```
-
-### Error Boundary
-
-```js
-// Prefix: SErrorBoundary
-<ErrorBoundary
-  fallback={(error, reset) => (
-    <div onClick={reset}>Error: {error.toString()}</div>
-  )}
->
-  {children}
-</ErrorBoundary>
-```
+This cursor placement is specifically designed to streamline the importing process, allowing you to quickly import the necessary functions or components using `cmd + .` without having to do it manually.
 
 > For the full list scroll to [here](#full-list)
 
